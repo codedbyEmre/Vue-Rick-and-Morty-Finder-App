@@ -4,6 +4,7 @@ A fully responsible Rick and MOrty finder app that shows characters,episodes,loc
 
 The API which was used on this project can be found <a href="https://rickandmortyapi.com/" target="_blank">here</a>
 
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
