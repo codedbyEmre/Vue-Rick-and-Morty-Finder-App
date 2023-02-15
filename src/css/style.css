@@ -1,0 +1,66 @@
+.characters,
+.locations,
+.episodes-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1.25rem;
+}
+
+.characters .card,
+.locations .card,
+.episodes-main .card {
+  transition: 0.3s ease all;
+}
+
+.characters .card:hover,
+.locations .card:hover,
+.episodes-main .card:hover {
+  box-shadow: 0px 0.5rem 0.75rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+}
+
+.characters .card .card-image .image img {
+  object-fit: cover !important;
+}
+
+.episodes,
+.residents,
+.characters-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.episodes .episode,
+.residents .resident,
+.characters-flex .character-flex {
+  height: 1rem;
+  width: 1rem;
+  padding: 1rem;
+  background-color: hsl(153, 53%, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: 0.3s ease all;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+.episodes .episode:hover,
+.residents .resident:hover {
+  background-color: hsl(153, 53%, 30%);
+}
+
+@media (max-width: 48rem) {
+  .card .card-inner {
+    flex-direction: column !important;
+  }
+
+  .pagination {
+    flex-direction: column !important;
+  }
+
+  .pagination .pagination-stats {
+    margin-top: 1.5rem;
+  }
+}
