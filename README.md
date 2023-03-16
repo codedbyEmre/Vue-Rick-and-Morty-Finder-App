@@ -5,10 +5,9 @@
 Vue 3
 Composition Api
 Vue Router 4
-Vuetify 3
+Bulma
 Pinia
 Vite
-Firebase 9
 ```
 
 The API used on this project can be found <a href="https://rickandmortyapi.com/" target="_blank">here</a>
