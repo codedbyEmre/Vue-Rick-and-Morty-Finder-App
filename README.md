@@ -1,6 +1,15 @@
 # Vue3 Rick and Morty Finder App
 
-A fully responsible Rick and Morty finder app that shows characters,episodes,locations and their connections. It was created by using Vue3, Composition Api, Pinia, Vue Router and Bulma.
+## Stacks
+```
+Vue 3
+Composition Api
+Vue Router 4
+Vuetify 3
+Pinia
+Vite
+Firebase 9
+```
 
 The API used on this project can be found <a href="https://rickandmortyapi.com/" target="_blank">here</a>
 
