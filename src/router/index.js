@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import ViewCharacters from '@/views/ViewCharacters/ViewCharacters.vue';
 import ViewCharacterDetail from '@/views/ViewCharacters/ViewCharacterDetail.vue';
 import ViewEpisodes from '@/views/ViewEpisodes/ViewEpisodes.vue';
@@ -40,7 +40,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 });
 
