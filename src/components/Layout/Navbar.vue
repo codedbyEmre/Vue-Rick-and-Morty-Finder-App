@@ -22,13 +22,13 @@
 
       <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showMobileNav }" ref="navbarMenuRef">
         <div class="navbar-end">
-          <RouterLink @click="showMobileNav = false" to="/" class="navbar-item" active-class="is-active"
+          <RouterLink @click="handlePageClicked" to="/" class="navbar-item" active-class="is-active"
             >Characters</RouterLink
           >
-          <RouterLink @click="showMobileNav = false" to="/episodes" class="navbar-item" active-class="is-active"
+          <RouterLink @click="handlePageClicked" to="/episodes" class="navbar-item" active-class="is-active"
             >Episodes</RouterLink
           >
-          <RouterLink @click="showMobileNav = false" to="/locations" class="navbar-item" active-class="is-active"
+          <RouterLink @click="handlePageClicked" to="/locations" class="navbar-item" active-class="is-active"
             >Locations</RouterLink
           >
         </div>
@@ -41,6 +41,14 @@
 //  imports
 import { ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
+import { useStoreCharacters } from '@/stores/storeCharacters';
+import { useStoreEpisodes } from '@/stores/storeEpisodes';
+import { useStoreLocations } from '@/stores/storeLocations';
+
+// stores
+const storeCharacters = useStoreCharacters();
+const storeEpisodes = useStoreEpisodes();
+const storeLocations = useStoreLocations();
 
 const showMobileNav = ref(false);
 const navbarBurgerRef = ref(null);
@@ -55,6 +63,20 @@ onClickOutside(
     ignore: [navbarBurgerRef]
   }
 );
+
+const handlePageClicked = () => {
+  showMobileNav.value = false;
+
+  storeCharacters.page = 1;
+  storeCharacters.search = '';
+  storeCharacters.getAllCharacters(1, '');
+
+  storeEpisodes.page = 1;
+  storeEpisodes.getAllEpisodes(1);
+
+  storeLocations.page = 1;
+  storeLocations.getAllLocations(1);
+};
 </script>
 
 <style>
