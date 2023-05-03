@@ -1,11 +1,21 @@
 <template>
   <div class="pagination is-justify-content-between mt-6 mb-3 px-1">
     <div class="pagination-buttons">
-      <button @click="store.handlePages('prev')" class="button is-success" :disabled="store.disablePrevBtn">
+      <button
+        @click="store.handlePages('prev')"
+        class="button is-success"
+        :disabled="store.disablePrevBtn"
+        aria-label="previous button"
+      >
         <i class="fa-solid fa-arrow-left mr-2"></i>
         Prev
       </button>
-      <button @click="store.handlePages('next')" class="button is-success ml-3" :disabled="store.disableNextBtn">
+      <button
+        @click="store.handlePages('next')"
+        class="button is-success ml-3"
+        :disabled="store.disableNextBtn"
+        aria-label="next button"
+      >
         Next
         <i class="fa-solid fa-arrow-right ml-2"></i>
       </button>
