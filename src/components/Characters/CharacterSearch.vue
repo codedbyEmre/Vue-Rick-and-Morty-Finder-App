@@ -10,7 +10,11 @@
       />
     </div>
     <div class="control">
-      <a @click.prevent="storeCharacters.getAllCharacters((page = 1), modelValue)" class="button is-success searchBtn">
+      <a
+        href="#"
+        @click.prevent="storeCharacters.getAllCharacters((page = 1), modelValue)"
+        class="button is-success searchBtn"
+      >
         <i class="fas fa-search"></i>
       </a>
     </div>
