@@ -12,6 +12,7 @@
     <div class="control">
       <a
         href="#"
+        aria-label="search"
         @click.prevent="storeCharacters.getAllCharacters((page = 1), modelValue)"
         class="button is-success searchBtn"
       >
