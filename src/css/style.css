@@ -1,3 +1,12 @@
+:root {
+  --primary-color: hsl(153, 53%, 53%);
+}
+
+.navbar-brand > .router-link-active,
+.navbar-brand > .router-link-exact-active {
+  background-color: var(--primary-color) !important;
+}
+
 .characters,
 .locations,
 .episodes-main {
@@ -35,7 +44,7 @@
   height: 1rem;
   width: 1rem;
   padding: 1rem;
-  background-color: hsl(153, 53%, 50%);
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
